@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.3em;
+    opacity: 0.9;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    min-height: 600px;
+}
+
+.sidebar {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 30px;
+}
+
+.sidebar h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    color: #4ECDC4;
+    border-bottom: 3px solid #4ECDC4;
+    padding-bottom: 10px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+
+input, select {
+    background: rgba(255,255,255,0.9);
+    border: 2px solid transparent;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #4ECDC4;
+    box-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+}
+
+button {
+    background: linear-gradient(135deg, #FF6B6B, #EE5A52);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+button.primary {
+    background: linear-gradient(135deg, #4ECDC4, #44A08D);
+}
+
+button.danger {
+    background: linear-gradient(135deg, #FF6B6B, #e74c3c);
+}
+
+.task-list {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.task-item {
+    background: rgba(255,255,255,0.9);
+    color: #2c3e50;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #4ECDC4;
+}
+
+.remove-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.content {
+    padding: 30px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+.content h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+.result-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left: 8px solid;
+    transition: transform 0.3s;
+}
+
+.result-item:hover {
+    transform: translateY(-5px);
+}
+
+.critical { border-left-color: #FF6B6B; background: linear-gradient(135deg, #ffeaea, #fff); }
+.high { border-left-color: #FFA726; background: linear-gradient(135deg, #fff3e0, #fff); }
+.medium { border-left-color: #42A5F5; background: linear-gradient(135deg, #e3f2fd, #fff); }
+.low { border-left-color: #66BB6A; background: linear-gradient(135deg, #e8f5e8, #fff); }
+
+.score {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2c3e50;
+    float: right;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #667eea;
+    font-size: 1.2em;
+    background: rgba(255,255,255,0.8);
+    border-radius: 10px;
+    border: 2px dashed #667eea;
+}
+
+.error {
+    background: #ffeaea;
+    color: #e74c3c;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #e74c3c;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        border-right: none;
+        border-bottom: 3px solid #34495e;
+    }
+}

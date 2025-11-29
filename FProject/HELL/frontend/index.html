@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Task Analyzer</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌈 Smart Task Analyzer</h1>
+            <p>AI-powered task prioritization with colorful design! 🚀</p>
+        </header>
+
+        <div class="main">
+            <div class="sidebar">
+                <h2>🎯 Add Tasks</h2>
+                
+                <select id="strategy">
+                    <option value="smart_balance">🌟 Smart Balance</option>
+                    <option value="fastest_wins">⚡ Fastest Wins</option>
+                    <option value="high_impact">💎 High Impact</option>
+                    <option value="deadline_driven">⏰ Deadline Driven</option>
+                </select>
+
+                <input type="text" id="taskTitle" placeholder="📝 Enter task title...">
+                <input type="number" id="hours" placeholder="⏱️ Hours needed" value="1" min="0.1" step="0.1">
+                <input type="number" id="importance" placeholder="💖 Importance (1-10)" value="5" min="1" max="10">
+                
+                <button onclick="addTask()">➕ Add Task</button>
+                <button onclick="analyzeTasks()" class="primary">🔍 Analyze Tasks</button>
+                <button onclick="getSuggestions()">💡 Get Suggestions</button>
+                <button onclick="clearAll()" class="danger">🗑️ Clear All</button>
+
+                <div class="task-list" id="taskList"></div>
+            </div>
+
+            <div class="content">
+                <h2>📊 Results</h2>
+                <div id="results"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
