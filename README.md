@@ -9,7 +9,7 @@
 
 *A beautiful, intelligent task prioritization web app that helps you focus on what matters most!*
 
-![Demo](https://via.placeholder.com/800x400/667eea/ffffff?text=SmartTask+Prioritizer+Demo)
+![Demo](https://via.placeholder.com/800x400/667eea/ffffff?text=SmartTask+Prioritizer+Demo)    
 
 </div>
 
