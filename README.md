@@ -26,7 +26,7 @@
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.8+
+- Python 3.8+    
 - Django 4.2.7
 - Modern web browser
 
